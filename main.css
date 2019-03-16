@@ -171,7 +171,8 @@ section#about {
 .inner-box{
     text-align: left;
     /* font-family: monospace; */
-    border: black solid 1pt;
+    /* border: black solid 1pt; */
+    background: rgb(250, 250, 250);
     padding: 10px;
     margin: 5px;
     
@@ -179,26 +180,28 @@ section#about {
 
 #mid .inner-box{
   border: none;
+  background: none;
 }
 
 /* box titles */
 .inner-box h4{
 /* border: black solid 1pt; */
-  /* background: gold; */
+ background: rgba(0, 0, 0, 0.733);
+ color: white;
  text-align: center;
  text-transform: capitalize;
  text-emphasis: none;
- text-decoration: underline;
- font-weight: normal;
+ /* text-decoration: underline; */
+ /* font-weight: normal; */
  font-size: 12pt;
-
+padding: 10px;
 }
 
 /* lists */
 .inner-box ul{
   text-decoration: none;
   list-style: none;
-  text-align: left;
+  text-align: center;
   padding: 10px;
   font-size: 10pt;
 }
@@ -226,6 +229,7 @@ section#about {
   margin-top: 20px;
   display: flex;
   /* justify-content: center; */
+  background: none;
 }
 
 .educ img{
@@ -237,6 +241,7 @@ section#about {
 .educ .bc{
   width: 60px;
   padding: 5px;
+
 }
 
 /* .educ .info{
