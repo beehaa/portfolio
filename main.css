@@ -1,7 +1,3 @@
-section#home {
-    /* no repeat, putting in the center, cover the whole space */
-    background: url('img/profile-pic.JPG') no-repeat center center/cover;
-}
 
 .container{
     width: 100%;
@@ -17,6 +13,18 @@ section#home {
     /* grid-template-rows: 3rem; */
 }
 
+section{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 100vh; 
+  width: 100%;
+  /* snap effect */
+  scroll-snap-align: center;
+}
+
 
 .navbar{
     position: fixed;
@@ -25,7 +33,8 @@ section#home {
     display: flex;
     width: 100%;
     height: 60px;
-    /* background: rgb(0, 0, 0, 0.5); */
+    
+    /* background: rgba(255, 255, 255,1); */
 }
 
 
@@ -47,7 +56,7 @@ section#home {
 }
 
 .navbar ul li a {
-    font-size: 9pt;
+    font-size: 10pt;
     text-decoration: none;
     text-transform: uppercase;
     color: black;
@@ -55,37 +64,39 @@ section#home {
 }
 .navbar ul li a:hover{
     color: white;
+    
     background: rgb(75, 75, 75);
     border-radius: 5%;
     /* text-decoration: underline; */
     /* padding: 3px; */
 }
 
-section{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    height: 100vh; 
-    width: 100%;
-    /* snap effect */
-    scroll-snap-align: center;
-}
-
-
+/* ----------------home------------- */
 #home header{
     /* height: 40%; */
-    margin-top: -250px;
+    margin-top: -350px;
     margin-bottom: 30px;
 }
 
+/* #home header h1{
+  color: rgb(128, 11, 11);
+  font-size: 36pt;
+  text-transform: uppercase;  
+  font-family: montserrat;
+} */
+
+
+section#home {
+  /* no repeat, putting in the center, cover the whole space */
+  background: url('img/profile-pic.JPG') no-repeat center center/cover;
+}
   /* down arrow */
-  .arrow a { color: white;
+  .arrow a { 
+    color: white;
     text-decoration: none; 
    background-color: rgba(0, 0, 0, 0.1);
    padding: 10px;
-   border-radius: 50%;
+   border-radius: 100px;
    }
  
  .arrow {
@@ -112,9 +123,18 @@ section{
    }
  } */
 
-.typewrite{
+#home .typewrite{
    text-decoration: none;
+   font-size: 12pt;
    color: white;
+   font-family: monospace;
+   background: rgba(0, 0, 0, 0.15);
+   padding: 5px;
+}
+
+.box .typewrite{
+  text-decoration: none;
+  color: black;
 }
 
 /* ------------------- about ------------------------*/
@@ -137,8 +157,8 @@ section#about {
 }
 
 .box{
-    border: black solid 1pt;
-    width: 90%;
+    /* border: black solid 1pt; */
+    width: 100%;
     display: grid;   /* gives the spaced out inner boxes */
 }
 
@@ -149,24 +169,199 @@ section#about {
 }
 
 .inner-box{
-    text-align: center;
+    text-align: left;
+    /* font-family: monospace; */
     border: black solid 1pt;
+    padding: 10px;
     margin: 5px;
+    
+}
+
+#mid .inner-box{
+  border: none;
+}
+
+/* box titles */
+.inner-box h4{
+/* border: black solid 1pt; */
+  /* background: gold; */
+ text-align: center;
+ text-transform: capitalize;
+ text-emphasis: none;
+ text-decoration: underline;
+ font-weight: normal;
+ font-size: 12pt;
+
+}
+
+/* lists */
+.inner-box ul{
+  text-decoration: none;
+  list-style: none;
+  text-align: left;
+  padding: 10px;
+  font-size: 10pt;
+}
+
+/* text and headers */
+.inner-box p, h5{
+  text-align: left;
+  margin: 5px;
+
+}
+
+/* in progress */
+.inner-box small{
+  margin: 5px;
+  text-align: left;
+  padding: 6px;
+  color: white;
+  background: black;
+
+}
+
+/* schools */
+.educ{
+  margin-bottom: 10px;
+  margin-top: 20px;
+  display: flex;
+  /* justify-content: center; */
+}
+
+.educ img{
+  width: 70px;
+  margin: 10px;
+}
+
+/* math to make logos same size */
+.educ .bc{
+  width: 60px;
+  padding: 5px;
+}
+
+/* .educ .info{
+
+} */
+
+/* school titles */
+.inner-box h5{
+  font-size: 12pt;
+}
+
+/* aboutme and educ title */
+#education h3, #aboutme h3{
+  text-align: left;
+  font-size: 20pt;
+  text-decoration: underline;
+  text-underline-position: under;
+  /* color: rgb(15, 105, 141); */
+  text-transform: capitalize;
+ text-emphasis: none;
+ font-weight: normal;
 }
 
 /* ------------------- experience ------------------------*/
 
-/* section#experience {
-    
+
+.exp-wrapper{
+  display: grid;
+  width: 90%;
+  height: 80%;
+  grid-auto-columns: 1fr 3fr 1fr;
+  grid-template-rows: 1fr 5fr 1fr;
+  grid-gap: 1em;
+  /* border: white solid 1pt; */
+}
+
+.exp-wrapper header{
+ grid-row: 1;
+ grid-column: 2/3;
+ /* border: white solid 1pt; */
+}
+
+.exp-wrapper h4{
+  font-size: 12pt;
+}
+
+.exp i{
+  color: rgb(174, 175, 175);
+}
+
+.sidebar-left{
+  display: grid;
+  grid-template-rows: 1fr 2fr 2fr;
+  grid-row: 2;
+  grid-column: 1/2;
+
+  /* border: white solid 1pt; */
+}
+
+.sidebar-left .exp{
+  text-align: left;
+  padding: 10px;
+  font-size: 12px;
+  color: white;
+  /* border: white solid 1pt; */
+
+}
+
+.exp-wrapper article{
+  display: grid;
+  justify-content: stretch;
+  grid-template-rows: 1fr 2fr 2fr;
+
+  grid-row: 2;
+  grid-column: 2/4;
+
+  /* border: white solid 1pt; */
+}
+
+.exp-wrapper article .exp{
+  padding: 10px;
+  font-size: 13px;
+  color: white;
+  text-align: left;
+  color: white;
+  /* border: white solid 1pt; */
+}
+
+
+/* .exp-wrapper article #top{
+
 } */
 
-/* The actual timeline (the vertical ruler) */
+.exp-wrapper footer{
+  /* center button */
+  display: grid;
+  justify-content: center;
+  align-content: flex-end;
 
+  grid-row: 3;
+  grid-column: 1/4;
+
+  /* border: white solid 1pt; */
+}
+
+.exp-wrapper footer a{
+  text-decoration: none;
+  /* border: white solid 1pt; */
+  padding: 2px 20px;
+  background: white;
+  color: black;
+  border-radius: 3px;
+}
 /* ------------------- contact ------------------------*/
 
 section#contact {
     background: white;
     color: black;
+    font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
+
+}
+
+submit{
+  font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
+
 }
   
   .form-container{
